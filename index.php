@@ -25,7 +25,7 @@ $_SESSION["total_recargas"] = 0;
 }
 
 //
-abstract class Robo{
+class Robo{
     
     public $nome;
     public $modelo;
@@ -78,19 +78,17 @@ public function __construct($nome, $modelo, $energia, $potencia, $operador){
 }
 
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+if ($_SERVER['REQUEST_METHOD'] === 'POST'){
 
     $nome = $_POST ['nome'] ?? "";
     $modelo = $_POST ['modelo'] ?? "";
     $energia = $_POST ['energia'] ?? "";
     $potencia = $_POST ['potencia'] ?? "";
 
+  
+
+   
 }
-    $mensagem = "";
-
-//  function exibirStatus(){
-
-// }
 
 ?>
  
