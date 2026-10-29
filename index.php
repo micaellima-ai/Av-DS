@@ -20,14 +20,13 @@ abstract class Robo{
     public $potencia;
 
 public function __construct($nome, $modelo, $energia, $potencia){
-        $tihis -> $nome;
-        $tihis -> $modelo;
-        $tihis -> $energia;
-        $tihis -> $potencia;
+        $this -> $nome;
+        $this -> $modelo;
+        $this -> $energia;
+        $this -> $potencia;
+}
 }
 
-
-}
 class funcao{
     public function Explorador(){
         $this =  $modelo;
@@ -47,20 +46,6 @@ class funcao{
     }
 
 }
-class Energia{
-    public function EnergiaInicial(){
-        if($this == ()) {
-            return "Energia inicial";
-        }
-    }
-}
-
-class Secoes{
-    public function session_start(){
-    
-}
-}
-
 class Status{
     public function ExibirStatus(){
         return;
@@ -70,6 +55,19 @@ class Status{
 
         $mensagem = "Você esta recuperando Energia";
     }
+class Energia{
+    public function EnergiaInicial(){
+        return "ola";
+    }
+}
+
+class Secoes{
+    public function session_start(){
+    
+}
+}
+
+
 
     
 }
