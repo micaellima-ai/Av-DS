@@ -1,8 +1,6 @@
 <?php 
 
 
-
-
 $energia = 0;
 $recarga_energia = 0;
 
@@ -12,36 +10,58 @@ $recarga_energia = 0;
 $caminho = __DIR__ . "/dados/robos.json";
 
 
-// $json = ;
+// $json = (!) ;
 
 abstract class Robo{
+    
+    public $nome;
+    public $modelo;
+    public $energia;
+    public $potencia;
 
+public function __construct($nome, $modelo, $energia, $potencia){
+        $tihis -> $nome;
+        $tihis -> $modelo;
+        $tihis -> $energia;
+        $tihis -> $potencia;
+}
+
+
+}
+class funcao{
     public function Explorador(){
+        $this =  $modelo;
         return "Investigar planetas";
 
     }
 
     public function Engenheiro(){
+        $this =  $modelo;
         return "Reparar equipamentos";
 
     }
 
     public function Defensor(){
+        $this =  $modelo;
         return "Proteger a estação";
     }
 
 }
-abstract class Energia{
+class Energia{
     public function EnergiaInicial(){
-        
+        if($this == ()) {
+            return "Energia inicial";
+        }
     }
 }
 
+class Secoes{
+    public function session_start(){
+    
+}
+}
 
-
-
-
-abstract class Status{
+class Status{
     public function ExibirStatus(){
         return;
     }
@@ -51,7 +71,7 @@ abstract class Status{
         $mensagem = "Você esta recuperando Energia";
     }
 
-
+    
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
@@ -64,33 +84,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 }
     $mensagem = "";
 
-
-
 //  function exibirStatus(){
 
-
-
 // }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ?>
  
@@ -104,21 +100,31 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 <body>
 
     <form method="POST">
-        <label for=""></label>
-        
+
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+        <br><br>
 
         <label for=""></label>
-        <option value=""></option>
+        <option value="">
+            <option value="explorador">Explorador</option>
+            <option value="engenheiro">Engenheiro</option>
+            <option value="defensor">Defensor</option>
+        </option>
+        <br><br>
 
-        <label for=""></label>
+        <label for="energia">Energia</label>
+        <input type="number" id="energia" name="energia" min="100" max="200" required>
+        <br><br>
 
+        <label for="potencia">Potência</label>
+        <input type="number" id="potencia" name="potencia" min="0" max="30" required>
 
-        <label for=""></label>
-
-
-
-
+        <button type="submit">Enviar</button>
     </form>
+
+
+    <?php ?>
 
     
 </body>
